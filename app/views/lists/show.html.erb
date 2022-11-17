@@ -3,6 +3,7 @@
 <ul> <% @list.bookmarks.each do |bookmark| %>
 <h3>Movie</h3>
 <p><%= bookmark.movie.title %></p>
+<ul><%= image_tag bookmark.movie.poster_url %></ul>
 <h5>Comment</h5>
 <p><%= bookmark.comment.capitalize %></p>
 <%= link_to "Delete",
