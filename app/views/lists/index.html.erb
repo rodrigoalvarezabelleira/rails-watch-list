@@ -2,6 +2,10 @@
 <ul>
 <% @lists.each do |list| %>
 <p><%= link_to list.name, list %></p>
+<%= link_to "Delete",
+  list_path(list),
+  data: {turbo_method: :delete, turbo_confirm: "Are you sure?"}
+%>
 <% end %>
 </ul>
 
